@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <title>เพิ่มสินค้า</title>
+    <style>
+      body {
+        background: url(./images/com.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 login-box mx-auto">
+          <form
+            action="insertProduct.php"
+            method="post"
+            id="form1"
+            enctype="multipart/form-data"
+          >
+            <div class="form-group">
+              <label for="text">ชื่อสินค้า</label>
+              <input
+                type="text"
+                class="form-control"
+                id="productname"
+                name="productname"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>คำอธิบาย</label>
+              <textarea
+                rows="5"
+                class="form-control"
+                id="description"
+                name="description"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="file">รูปภาพ</label><br />
+              <input type="file" name="file" required />
+            </div>
+          </form>
+          <a href="home.php"
+            ><button class="btn btn-danger" title="กลับไปยังหน้าแรก">
+              ยกเลิก
+            </button></a
+          >
+
+          <button
+            type="submit"
+            class="btn btn-info  float-right"
+            title="เพิ่มสินค้า"
+            form="form1"
+          >
+            ยืนยัน
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

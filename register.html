@@ -4,27 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="./css/font-awesome.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
   </head>
 
   <body>
     <br />
     <div class="container">
       <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4" style="background-color: azure">
+        <div class="col-md-4 login-box mx-auto">
           <h1 align="center">Register</h1>
-          <form action="save_register.php" method="post">
+          <form action="register.php" method="post">
             <div class="form-group">
               <label for="email">Email</label>
               <input
                 type="email"
                 class="form-control"
                 id="email"
+                name="email"
                 placeholder="Email"
+                required
               />
             </div>
             <div class="form-group">
@@ -32,19 +35,24 @@
               <input
                 type="password"
                 id="password"
+                name="password"
                 class="form-control"
                 placeholder="Password"
+                required
               />
             </div>
             <div class="form-group">
               <label for="password">Confirmpassword</label>
               <input
                 type="password"
+                id="passwordConfirm"
+                name="passwordConfirm"
                 class="form-control"
                 placeholder="Confirmpassword"
+                required
               />
             </div>
-            <button type="submit" class="btn btn-info" style="width:100%">
+            <button id="submit" type="submit" class="btn btn-info btn-block">
               REGISTER
             </button>
             <a href="login.html">Already have an account?</a>
@@ -52,7 +60,9 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="./js/jquery.js"></script>
-    <script type="text/javascript" scr="./js/bootstrap.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="./check-password.js"></script>
   </body>
 </html>

@@ -1,0 +1,20 @@
+.login-box {
+  background-color: #cae5e5;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 2px 4px rgb(0, 0, 0, 0.4);
+}
+
+.wrong-password {
+  border: 2px solid #e97171;
+}
+a:visited {
+  color: darkorange;
+  background-color: transparent;
+  touch-action: double-tap-zoom;
+}
+a:link {
+  color: darkred;
+  background-color: transparent;
+  text-decoration: none;
+}
